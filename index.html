@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Business Assistant | Grow Your Business</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="icon">💼</span>
+                <h1>SA Business Assistant</h1>
+            </div>
+            <nav class="nav">
+                <a href="#ai-assistant" class="nav-link">AI Assistant</a>
+                <a href="#channels" class="nav-link">Channels</a>
+                <a href="#resources" class="nav-link">Resources</a>
+                <a href="#compliance" class="nav-link">Compliance</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Grow Your South African Business</h2>
+            <p class="hero-subtitle">Get AI-powered recommendations, find the right channels, and stay compliant with SA regulations.</p>
+            <button class="btn-hero" onclick="scrollToSection('ai-assistant')">Start with AI Assistant 🤖</button>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="section">
+        <div class="container">
+            <h2 class="section-title">🤖 AI Business Assistant</h2>
+            <p class="section-subtitle">Ask anything about starting or growing your SA business</p>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            👋 Hello! I'm your SA Business Assistant. I can help you with:
+                            <ul>
+                                <li>Finding the right business channels</li>
+                                <li>Understanding CIPC registration</li>
+                                <li>Tax compliance (SARS)</li>
+                                <li>Marketing strategies</li>
+                                <li>Funding opportunities</li>
+                            </ul>
+                            What would you like to know?
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Ask a question... (e.g., 'How do I register my business?')">
+                    <button class="chat-send-btn" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <h3>Quick Questions:</h3>
+                <button class="quick-btn" onclick="askQuestion('How do I register a business in SA?')">Register Business</button>
+                <button class="quick-btn" onclick="askQuestion('What are the best marketing channels?')">Marketing Channels</button>
+                <button class="quick-btn" onclick="askQuestion('How do I get funding?')">Get Funding</button>
+                <button class="quick-btn" onclick="askQuestion('Tax compliance for SMEs')">Tax Compliance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels Section -->
+    <section id="channels" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">📢 Marketing & Sales Channels</h2>
+            <p class="section-subtitle">Popular channels for South African businesses</p>
+            
+            <div class="channel-grid">
+                <div class="channel-card">
+                    <div class="channel-icon">🛒</div>
+                    <h3>E-Commerce Platforms</h3>
+                    <ul>
+                        <li><a href="https://www.takealot.com/sellers" target="_blank">Takealot Marketplace</a></li>
+                        <li><a href="https://www.bidorbuy.co.za/" target="_blank">BidorBuy</a></li>
+                        <li><a href="https://www.shopify.com/" target="_blank">Shopify</a></li>
+                        <li><a href="https://www.woocommerce.com/" target="_blank">WooCommerce</a></li>
+                    </ul>
+                </div>
+
+                <div class="channel-card">
+                    <div class="channel-icon">📱</div>
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li><a href="https://business.facebook.com/" target="_blank">Facebook Business</a></li>
+                        <li><a href="https://www.instagram.com/business/" target="_blank">Instagram Business</a></li>
+                        <li><a href="https://www.tiktok.com/business/" target="_blank">TikTok for Business</a></li>
+                        <li><a href="https://business.linkedin.com/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="channel-card">
+                    <div class="channel-icon">📍</div>
+                    <h3>Local Listing</h3>
+                    <ul>
+                        <li><a href="https://www.google.com/business/" target="_blank">Google My Business</a></li>
+                        <li><a href="https://www.hellopeter.com/" target="_blank">HelloPeter</a></li>
+                        <li><a href="https://www.snupit.co.za/" target="_blank">Snupit</a></li>
+                        <li><a href="https://www.yalwa.co.za/" target="_blank">Yalwa SA</a></li>
+                    </ul>
+                </div>
+
+                <div class="channel-card">
+                    <div class="channel-icon">📊</div>
+                    <h3>Digital Advertising</h3>
+                    <ul>
+                        <li><a href="https://ads.google.com/" target="_blank">Google Ads</a></li>
+                        <li><a href="https://www.facebook.com/business/ads" target="_blank">Facebook Ads</a></li>
+                        <li><a href="https://www.gumtree.co.za/a-advertising" target="_blank">Gumtree Ads</a></li>
+                        <li><a href="https://ads.microsoft.com/" target="_blank">Microsoft Advertising</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section">
+        <div class="container">
+            <h2 class="section-title">📚 SA Business Resources</h2>
+            <p class="section-subtitle">Official government portals, funding, and business tools</p>
+            
+            <div class="resource-grid">
+                <div class="resource-category">
+                    <h3>🏛️ Government & Regulatory</h3>
+                    <div class="resource-list">
+                        <a href="https://www.cipc.co.za/" target="_blank" class="resource-link">
+                            <strong>CIPC</strong> - Companies &  Intellectual Property Commission
+                        </a>
+                        <a href="https://www.sars.gov.za/" target="_blank" class="resource-link">
+                            <strong>SARS</strong> - South African Revenue Service
+                        </a>
+                        <a href="https://www.labour.gov.za/" target="_blank" class="resource-link">
+                            <strong>Department of Labour</strong> - Labour regulations
+                        </a>
+                        <a href="https://www.thedtic.gov.za/" target="_blank" class="resource-link">
+                            <strong>dtic</strong> - Trade, Industry & Competition
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3>💰 Funding & Support</h3>
+                    <div class="resource-list">
+                        <a href="https://www.seda.org.za/" target="_blank" class="resource-link">
+                            <strong>SEDA</strong> - Small Enterprise Development Agency
+                        </a>
+                        <a href="https://www.nef.co.za/" target="_blank" class="resource-link">
+                            <strong>NEF</strong> - National Empowerment Fund
+                        </a>
+                        <a href="https://www.idc.co.za/" target="_blank" class="resource-link">
+                            <strong>IDC</strong> - Industrial Development Corporation
+                        </a>
+                        <a href="https://www.businesspartners.co.za/" target="_blank" class="resource-link">
+                            <strong>Business Partners</strong> - SME Funding
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3>🤝 Business Networks</h3>
+                    <div class="resource-list">
+                        <a href="https://www.sabusinesschamber.co.za/" target="_blank" class="resource-link">
+                            <strong>SACCI</strong> - SA Chamber of Commerce
+                        </a>
+                        <a href="https://www.smesa.org.za/" target="_blank" class="resource-link">
+                            <strong>SME SA</strong> - Small Medium Enterprises
+                        </a>
+                        <a href="https://www.businesswomen.co.za/" target="_blank" class="resource-link">
+                            <strong>BWA</strong> - Business Women's Association
+                        </a>
+                        <a href="https://www.startupsa.org/" target="_blank" class="resource-link">
+                            <strong>Silicon Cape</strong> - Startup Network
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3>🛠️ Business Tools</h3>
+                    <div class="resource-list">
+                        <a href="https://www.sage.com/en-za/" target="_blank" class="resource-link">
+                            <strong>Sage Accounting</strong> - SA Accounting Software
+                        </a>
+                        <a href="https://www.xero.com/" target="_blank" class="resource-link">
+                            <strong>Xero</strong> - Cloud Accounting
+                        </a>
+                        <a href="https://www.canva.com/" target="_blank" class="resource-link">
+                            <strong>Canva</strong> - Design & Marketing
+                        </a>
+                        <a href="https://www.mailchimp.com/" target="_blank" class="resource-link">
+                            <strong>Mailchimp</strong> - Email Marketing
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Checklist -->
+    <section id="compliance" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">✅ Compliance Checklist</h2>
+            <p class="section-subtitle">Essential steps for SA business compliance</p>
+            
+            <div class="checklist-grid">
+                <div class="checklist-card">
+                    <h3>🏢 Company Registration</h3>
+                    <div class="checklist">
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Register company with CIPC</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Obtain company registration certificate</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Get Director's ID from Home Affairs</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Open business bank account</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-card">
+                    <h3>💵 Tax Registration</h3>
+                    <div class="checklist">
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Register for Tax with SARS</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Get VAT number (if turnover > R1m)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Register for PAYE (if you have employees)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Submit annual tax returns</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-card">
+                    <h3>👥 Labour Compliance</h3>
+                    <div class="checklist">
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Register with UIF (Unemployment Insurance)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Register with WorkCover (COID)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Issue contracts to employees</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Comply with Basic Conditions of Employment Act</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="checklist-card">
+                    <h3>📋 Other Requirements</h3>
+                    <div class="checklist">
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Get necessary business licenses</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Ensure B-BBEE compliance (if applicable)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Register trademarks/IP with CIPC</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Get business insurance</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SA Business Assistant | Empowering South African Entrepreneurs</p>
+            <p><small>Developed by Raphasha27</small></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
