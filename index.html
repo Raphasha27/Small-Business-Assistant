@@ -306,6 +306,156 @@
         </div>
     </section>
 
+    <!-- Business Tools Section -->
+    <section id="tools" class="section">
+        <div class="container">
+            <h2 class="section-title">🛠️ Business Tools</h2>
+            <p class="section-subtitle">Free tools to kickstart your business</p>
+            
+            <div class="tools-grid">
+                <!-- Business Name Generator -->
+                <div class="tool-card">
+                    <h3>🎯 Business Name Generator</h3>
+                    <p>Generate creative business names for your SA venture</p>
+                    <div class="tool-content">
+                        <input type="text" id="nameKeyword" class="tool-input" placeholder="Enter keyword (e.g., 'tech', 'food')">
+                        <button class="tool-btn" onclick="generateBusinessName()">Generate Names</button>
+                        <div id="nameResults" class="tool-results"></div>
+                    </div>
+                </div>
+
+                <!-- Startup Cost Calculator -->
+                <div class="tool-card">
+                    <h3>💰 Startup Cost Calculator</h3>
+                    <p>Estimate your initial business costs</p>
+                    <div class="tool-content">
+                        <div class="calc-input-group">
+                            <label>Registration Fees:</label>
+                            <input type="number" id="regFee" class="calc-input" value="175" placeholder="R175">
+                        </div>
+                        <div class="calc-input-group">
+                            <label>Office/Rent (monthly):</label>
+                            <input type="number" id="rentFee" class="calc-input" value="0" placeholder="R0">
+                        </div>
+                        <div class="calc-input-group">
+                            <label>Equipment/Stock:</label>
+                            <input type="number" id="equipFee" class="calc-input" value="0" placeholder="R0">
+                        </div>
+                        <div class="calc-input-group">
+                            <label>Marketing Budget:</label>
+                            <input type="number" id="marketFee" class="calc-input" value="0" placeholder="R0">
+                        </div>
+                        <button class="tool-btn" onclick="calculateCosts()">Calculate Total</button>
+                        <div id="costResults" class="cost-results"></div>
+                    </div>
+                </div>
+
+                <!-- Document Templates -->
+                <div class="tool-card">
+                    <h3>📄 Document Templates</h3>
+                    <p>Download essential business document templates</p>
+                    <div class="tool-content template-list">
+                        <button class="template-btn" onclick="downloadTemplate('business-plan')">
+                            📊 Business Plan Template
+                        </button>
+                        <button class="template-btn" onclick="downloadTemplate('invoice')">
+                            🧾 Invoice Template
+                        </button>
+                        <button class="template-btn" onclick="downloadTemplate('contract')">
+                            📝 Service Agreement
+                        </button>
+                        <button class="template-btn" onclick="downloadTemplate('quotation')">
+                            💵 Quotation Template
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Growth Tracker -->
+                <div class="tool-card">
+                    <h3>📈 Business Growth Tracker</h3>
+                    <p>Track your monthly revenue growth</p>
+                    <div class="tool-content">
+                        <div class="growth-inputs">
+                            <input type="number" id="monthlyRevenue" class="calc-input" placeholder="Monthly Revenue (R)">
+                            <button class="tool-btn" onclick="addRevenueEntry()">Add Entry</button>
+                        </div>
+                        <canvas id="growthChart" class="growth-chart"></canvas>
+                        <div id="growthStats" class="growth-stats"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">❓ Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <h3>How much does it cost to register a business in SA?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Sole Proprietor:</strong> R0 (free)<br>
+                        <strong>Pty (Ltd):</strong> R175 for online registration via CIPC<br>
+                        <strong>Close Corporation (CC):</strong> No longer available for new registrations<br><br>
+                        Additional costs may include: Name reservation (R50), Company Secretary (optional), Registered office address.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <h3>Do I need a business bank account?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! It's essential for:
+                        <ul>
+                            <li>Separating personal and business finances</li>
+                            <li>Tax compliance and record-keeping</li>
+                            <li>Professional credibility</li>
+                            <li>Easier accounting and bookkeeping</li>
+                        </ul>
+                        Most banks require: Company registration cert, ID, proof of address, and R10-R100 deposit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <h3>When should I register for VAT?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Mandatory:</strong> When your annual turnover exceeds <strong>R1 million</strong><br>
+                        <strong>Voluntary:</strong> You can register before R1m if it benefits your business<br><br>
+                        <strong>Benefits:</strong> Claim VAT back on business expenses<br>
+                        <strong>Responsibilities:</strong> Charge 15% VAT, submit bi-monthly returns, maintain records</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <h3>How do I get funding without collateral?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Options for funding without collateral:
+                        <ul>
+                            <li><strong>SEDA:</strong> Free training + potential funding</li>
+                            <li><strong>NEF:</strong> Focuses on black-owned businesses</li>
+                            <li><strong>Angel Investors:</strong> Equity-based funding</li>
+                            <li><strong>Crowdfunding:</strong> Platforms like Thr Funding</li>
+                            <li><strong>Business Competitions:</strong> SAB Kickstart, etc.</li>
+                        </ul>
+                        Key: Strong business plan, financial projections, market research!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">

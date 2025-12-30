@@ -29,6 +29,20 @@ Direct links to essential SA business resources:
 - **Business Networks**: SACCI, SME SA, BWA, Silicon Cape
 - **Business Tools**: Sage, Xero, Canva, Mailchimp
 
+### 🛠️ Business Tools (NEW)
+Essential tools to kickstart your venture:
+- **🎯 Business Name Generator**: Get creative name ideas instantly
+- **💰 Startup Cost Calculator**: Estimate registration, rent, and marketing costs
+- **📄 Document Templates**: Download free Business Plans, Invoices, and Contracts
+- **📈 Growth Tracker**: Visual chart to track your monthly revenue revenue
+
+### ❓ FAQ & Support
+- Quick answers to common questions about:
+  - Business Registration Costs
+  - Business Banking Requirements
+  - VAT Registration
+  - Funding without Collateral
+
 ### ✅ Compliance Checklist
 Interactive checklists for:
 - Company Registration (CIPC)
