@@ -98,20 +98,6 @@ Or simply double-click `index.html` to run locally!
 
 ---
 
-## 📸 Screenshots
-
-### AI Assistant
-![AI Chat Interface](./screenshots/ai-assistant.png)
-
-### Marketing Channels
-![Marketing Channels Grid](./screenshots/channels.png)
-
-### Resources Directory
-![Resources Section](./screenshots/resources.png)
-
-### Compliance Checklist
-![Compliance Checklist](./screenshots/compliance.png)
-
 ---
 
 ## 🤝 Contributing
